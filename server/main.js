@@ -7,7 +7,7 @@ Meteor.startup(() => {
   // code to run on server at startups
   const Records = Tasks.find({}).count();
 
-  console.log( Records );
+  //console.log( Records );
   //const aa = Tasks.find({}, { limit: 1 }).fetch();
   //console.log( aa );
 
@@ -24,8 +24,9 @@ Meteor.startup(() => {
   }
 
   Meteor.publish('tasks', function() {
-  	const aa = Tasks.find({}, { limit: 2 });
-  	console.log( aa );
-  	return aa;
+    const aa = Tasks.find({}, { limit: 2 });
+    console.log(aa);
+    return aa;
   });
 });
+const aa = Tasks.find({}, { limit: 2 }).fetch();

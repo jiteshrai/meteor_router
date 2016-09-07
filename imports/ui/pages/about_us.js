@@ -11,7 +11,7 @@ const AboutUs = (props) => {
 
 
 	//const link = Links.findOne({ token: req.params.token });
-	const RenderedImages = Tasks.find({}).fetch().map( function( image ){
+	const RenderedImages = props.tasks.find({}).map( function( image ){
 
 
 		return (
@@ -38,4 +38,4 @@ export default createContainer(() => {
   // as props
   return { tasks: Tasks.find({}).fetch() };
 }, AboutUs);
-console.log( Tasks.find({}).fetch() );
+//console.log( Tasks.find({}).fetch() );
